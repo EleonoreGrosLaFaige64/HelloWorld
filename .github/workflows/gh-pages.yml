@@ -1,23 +1,35 @@
 name: GitHub Pages
 
-
 on:
-  pull_request:
-    types: [opened, labeled, unlabeled, synchronize]
+  push:
+    branches:
+    - main
 
 jobs:
-  checkLabels:
-    runs-on: ubuntu-latest
-    if: ${{github.event.pull_request.labels.*.name[0]}}
-    steps:
-      - run: echo Check labels is not empty
-  build:
-    needs: [checkLabels]
-    strategy:
-      matrix:
-        label: ${{github.event.pull_request.labels.*.name}}
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world from "${{matrix.label}}"!
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm run test:headless
+
+    - name: Build
+      run: npm run build:prod
+
+    - name: Deploy
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: dist/angular-github-actions
+        enable_jekyll: true
