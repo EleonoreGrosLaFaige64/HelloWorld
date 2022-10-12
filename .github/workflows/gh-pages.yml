@@ -37,6 +37,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./HelloWorld
+        publish_dir: ./dist/hello-word/index.html
         enable_jekyll: true
         branch: gh-pages
