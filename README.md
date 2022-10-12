@@ -1,20 +1,20 @@
 TP NOTE
 
 
-1. Créer un repo Github
+##1. Créer un repo Github
 
-2. Créer une application Angular Hello World
+##2. Créer une application Angular Hello World
 ng new HelloWorld
 
-3. Pousser le code sur une branche locale et créer une pull request
+##3. Pousser le code sur une branche locale et créer une pull request
 git add . 
 git commit
 git push
 
-4. Créer un pipeline qui va analyser le code d’une pull request créée
+##4. Créer un pipeline qui va analyser le code d’une pull request créée
 =>dans workflow fichier main
 
-5. Créer un pipeline de déploiement Github Actions qui s’exécute sur un merge de pull request
+##5. Créer un pipeline de déploiement Github Actions qui s’exécute sur un merge de pull request
 tentative dans le dossier workflow => g-pages
 
 
