@@ -1,3 +1,33 @@
+TP NOTE
+
+
+1. Créer un repo Github
+
+2. Créer une application Angular Hello World
+ng new HelloWorld
+
+3. Pousser le code sur une branche locale et créer une pull request
+git add . 
+git commit
+git push
+
+4. Créer un pipeline qui va analyser le code d’une pull request créée
+=>dans workflow fichier main
+
+5. Créer un pipeline de déploiement Github Actions qui s’exécute sur un merge de pull request
+tentative dans le dossier workflow => g-pages
+
+
+
+
+
+
+
+
+
+
+
+
 # HelloWorld
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
@@ -33,3 +63,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #TEST BRANCHE DEV
 
 #Test
+
