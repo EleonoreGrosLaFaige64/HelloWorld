@@ -15,7 +15,7 @@ git push
 =>dans workflow fichier main
 
 ## 5. Créer un pipeline de déploiement Github Actions qui s’exécute sur un merge de pull request
-tentative dans le dossier workflow => g-pages
+tentative dans le dossier workflow => gh-pages
 
 
 
